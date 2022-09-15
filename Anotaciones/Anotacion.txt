@@ -1,4 +1,7 @@
 En esta aplicación vamos a traer imagenes de perritos que va consultar a la Api de dogs, cuando cargue la aplicación por primera vez va a traer un perro aleatoreo, cuando se cambie en el 
 selector nos va a traer un perro de la raza especifica y cuando demos click en la imagen nos va a traer un perro de la misma raza, en esta aplicación nos vamos a concentrar en realizar las
 peticiones a API y controlar los errores que puedan suceder cuando obtenemos información de internet, haciendo el ejercicio de quitar la conexión a internet automaticamente nos muestra un error
-y una vez que vuelve la conexión a internet, recargamos, la aplicación sigue funcionando correctamente 
+y una vez que vuelve la conexión a internet, recargamos, la aplicación sigue funcionando correctamente.
+
+-Se crea un archivo independiente para llamar a las API, creamos la carpeta "helpers" y dentro de ella el archivo getBreeds.js, dentro 
+del archivo js creamos la función (arrowFunction), mediante esta función vamos a obtener desde la API la lista de razas.
