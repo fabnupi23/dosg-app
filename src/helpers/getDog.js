@@ -18,7 +18,7 @@ const getDog = async (breedId) => {
 
   const [data] = await res.json();
 
-  let { url: image, breeds: [breed]} = data; //en la variable breed la ponemos [breed] para que me inicie en la posición cero 
+  let { url: image, breeds: [breed]} = data;  //en la variable breed la ponemos [breed] para que me inicie en la posición cero 
 
   if(!breed){
     breed = {
