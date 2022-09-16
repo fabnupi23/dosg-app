@@ -5,3 +5,16 @@ y una vez que vuelve la conexión a internet, recargamos, la aplicación sigue f
 
 -Se crea un archivo independiente para llamar a las API, creamos la carpeta "helpers" y dentro de ella el archivo getBreeds.js, dentro 
 del archivo js creamos la función (arrowFunction), mediante esta función vamos a obtener desde la API la lista de razas.
+
+-¿Como una arrwFunction podemos declararla después que la estamos utilizando?
+-(RTA)= Esto es porque realmente el useEffect se ejecuta después que se hace toda la lectura del componente e incluso se renderiza, así que realmente primero se lee la función
+        y al final se ejecuta; lo que impone react es el uso de los Hooks como el useState y el useEffect deben ser dentro de un componente y no pueden ser en algún otro lugar
+        por lo general el orden que se da es el siguiente:
+
+        *Todo lo que no tenga que ver con logica de estado lo declaro fuera del componente.
+        *Dentro del componente inicio con los estados o lo que tenga que ver con Data, siguiente
+        a los efectos se creara algo con dichos estados y finalmente las acciones que serán basicamente las 
+        funciones que haran dichos procesos para hacer los cambios de estado.
+
+-Ahora vamos a actualizar la imagen que tenemos en el card que vamos a treaer desde la API y esto lo hacemos cuando iniciamos la aplicación y también cuando realizamos
+algún cambio en el componente select, en el codigo de app creamos una nueva función para traer los pets, de hecho creamos creamos un nuevo Helper llamado getDogs

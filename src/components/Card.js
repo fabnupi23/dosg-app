@@ -1,14 +1,19 @@
 import React from 'react'
+import { Spinner } from './Spinner'
 
-function Card() {
+
+function Card({ dog, loading, updateDog }) {
+
+  if(loading) return <Spinner/>
+
   return (
-    <div className='card'>
+    <div className='card bounce' onClick={() => updateDog(dog.breed.id)}>
         <img
-            src=' https://upload.wikimedia.org/wikipedia/commons/0/04/Labrador_Retriever_%281210559%29.jpg'
+            src={dog.image}
             alt='dog'
          />
          <p>
-            Breed
+            {dog.breed.name}
          </p>
     </div>
   )
